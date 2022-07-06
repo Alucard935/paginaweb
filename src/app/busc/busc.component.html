@@ -1,3 +1,4 @@
+<br />
 <input type="text" name="" [(ngModel)]="dato" />
 <div *ngFor="let D of json">
   <div *ngIf="D.nombre === dato || D.apellido === dato || D.nombre + ' ' + D.apellido === dato ">
@@ -6,3 +7,5 @@
     <img [src]="D.Foto" />
   </div>
 </div>
+<br><br />
+<a routerLink="/habi">Habitaciones</a>
