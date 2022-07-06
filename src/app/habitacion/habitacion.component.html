@@ -1,1 +1,19 @@
-<p>habitacion works!</p>
+<table>
+  <tr>
+    <th>Temperatura</th>
+    <th>Humedad</th>
+    <th>Nombre del cuarto</th>
+  </tr>
+  <tr *ngFor="let datos of json">
+    <td>{{datos.doble}}</td>
+    <td>{{datos.humedad}}</td>
+    <td>{{datos.sensor}}</td>
+  </tr>
+
+  <input type="text" [(ngModel)]="valor">
+  <div *ngFor="let jdatos of json">
+    <div *ngIf="'uno' == valor">
+      El primer valor es: {{jdatos.doble}}
+    </div>
+  </div>
+</table>
