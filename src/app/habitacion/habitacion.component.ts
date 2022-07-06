@@ -8,17 +8,24 @@ import { Component, OnInit } from '@angular/core';
   
 export class HabitacionComponent implements OnInit {
 
-  getRandonSensor() {
+  getRandomSensor() {
     let min = 10;
     let max = 15;
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min +1) + min)
   };
+  getRandomTemp() {
+    let min = 22;
+    let max = 35;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min +1) + min)
+  };
   valor = "";
   json = [
-    { doble: 37, humedad: this.getRandonSensor(), sensor: "Site 1" },
-    { doble: 27, humedad: this.getRandonSensor(), sensor: "Site 2" }
+    { doble: this.getRandomTemp(), humedad: this.getRandomSensor(), sensor: "Site 1" },
+    { doble: this.getRandomTemp(), humedad: this.getRandomSensor(), sensor: "Site 2" }
   ];
   constructor() { }
 
