@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HabitacionComponent } from './habitacion/habitacion.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BuscComponent } from './busc/busc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HabitacionComponent,
-    LoginComponent
+    LoginComponent,
+    BuscComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

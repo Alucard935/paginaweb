@@ -1,0 +1,8 @@
+<input type="text" name="" [(ngModel)]="dato" />
+<div *ngFor="let D of json">
+  <div *ngIf="D.nombre === dato || D.apellido === dato || D.nombre + ' ' + D.apellido === dato ">
+    <h1>{{D.nombre}}</h1>
+    <h2>{{D.apellido}}</h2>
+    <img [src]="D.Foto" />
+  </div>
+</div>
