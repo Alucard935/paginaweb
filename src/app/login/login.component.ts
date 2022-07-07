@@ -12,12 +12,12 @@ export class LoginComponent implements OnInit {
 
   json = [
     { email: "Enrique", password: "123456" },
-    { nombre: "Fernando", password: "Coss" },
-    { nombre: "Arturo", password: "Gonzales" }
+    { email: "Fernando", password: "Coss" },
+    { email: "Arturo", password: "Gonzales" }
   ]
   login() {
     for (let i = 0; i < this.json.length; i++)
-    if (this.email == this.json[0].email && this.password == this.json[0].password) {
+    if (this.email == this.json[i].email && this.password == this.json[i].password) {
       window.location.href = "/habi";
     }
   }
